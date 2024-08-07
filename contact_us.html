@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoebe & George | 優順實業股份有限公司</title>
+    <link rel="stylesheet" href="./boostrap_css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="./boostrap_js/bootstrap.bundle.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="p-2 text-center" style="background-color: lightgreen;">最新消息/速報</div>
+    <div class="sticky-top p-2" style="background-color: darkgreen;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img src="./image/logo_02.png" alt="" height="70px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation" style="color: white" ;>
+                    <span class="navbar-toggler-icon text-white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./about.html">公司介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./news.html">最新消息</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                                產品專區
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./products_all.html">所有商品</a></li>
+                                <li><a class="dropdown-item" href="#">酒吧櫃台組合</a></li>
+                                <li><a class="dropdown-item" href="#">酒吧台</a></li>
+                                <li><a class="dropdown-item" href="#">高腳椅</a></li>
+                                <li><a class="dropdown-item" href="#">酒櫃</a></li>
+                                <li><a class="dropdown-item" href="#">餐桌椅套組</a></li>
+                                <li><a class="dropdown-item" href="#">咖啡桌/茶几</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./contact_us.html">聯絡我們</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <ul class="list-unstyled list-inline m-2">
+                        <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-user"></i></button>
+                        </li>
+                        <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#"><i class="fas fa-cart-shopping"></i></button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <!-- header end -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">會員登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">帳號 / id :</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">密碼 / password :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <p><a href="#">忘記密碼?</a>&ensp;或&ensp;<a href="#">會員註冊</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+                    <button type="button" class="btn btn-success">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 麵包屑 -->
+    <nav class="ms-4 mt-2"
+    style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+    aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a style="text-decoration: none; color: black;" href="./index.html">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">聯絡我們</li>
+        </ol>
+    </nav>
+    <!-- 聯絡我們 -->
+
+    <div class="container-fluid text-center mt-5 mb-4">
+        <h4 class="mt-4 mb-4" style="font-weight: bolder; color: black; text-align:center;">位置資訊</h4>
+    </div>
+    <div class="container-fluid text-center mt-5 mb-4 mx-auto">
+        <div class="row justify-content-center g-1">
+            <div class="col-md-5"><iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7289.835974809275!2d120.51157!3d23.998673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34694969fa8bcb11%3A0xe0bd4fd062818af4!2z5YSq6aCG5a-m5qWt6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1717052991792!5m2!1szh-TW!2stw"
+                width="80%" height="225" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="col-md-5">
+                <p style="text-align:left">Taiwan Factory：2 Tienyuan Lane, Hsialung Village, Hsiushui Hsiang, Changhua
+                    Hsien, Taiwan 504</p>
+                <p style="text-align:left">Tel：+886-4-768 5551</p>
+                <p style="text-align:left">Fax：+886-4-768 5277</p>
+                <p style="text-align:left">Email：youshun-pg12@umail.hinet.net</p>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center g-1">
+            <div class="col-md-5"><iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3668.407385051278!2d114.222096!3d23.155327!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34049c91431213a9%3A0x69432848d27d3309!2z5pel5qau6Yu85pyo5a625YW36KO96YCg5bug!5e0!3m2!1szh-TW!2stw!4v1717053713981!5m2!1szh-TW!2stw"
+                width="80%" height="225" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="col-md-5">
+                <p style="text-align:left">CHINA FACTORY：West Industrial Area, Yiho Town, Borluo Interstate High-tech
+                    Industry Park,Borluo Hsien, Huizhou City, Guang Dong, China</p>
+                <p style="text-align:left">Tel：+ 86-752-6316788</p>
+                <p style="text-align:left">Fax：+ 86-752-6316789</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid text-center mt-5 mb-4">
+        <h4 class="mt-4 mb-4" style="font-weight: bolder; color: black; text-align:center;">聯絡我們</h4>
+    </div>
+
+    <div class="container">
+        <p class="text-center">感謝您的支持和關注，我們始終感激您的查詢和反饋。</p>
+        <p class="text-center">請留下您的姓名和聯絡訊息，我們將為您提供最好和最迅速的服務。</p>
+        <br>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+                <label for="validationCustom01" class="form-label">姓名 (Full Name)</label>
+                <input type="text" class="form-control" id="validationCustom01" value="徐小明" required>
+                <div class="valid-feedback">
+                    完成!
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom02" class="form-label">聯絡電話 (Phone Number)</label>
+                <input type="tel" class="form-control" id="validationCustom02" value="0900-000000" required>
+                <div class="valid-feedback">
+                    完成!
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label for="validationCustom03" class="form-label">電子信箱 (E-mail)</label>
+                <input type="email" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    請輸入正確格式
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label for="validationCustom04" class="form-label">訊息 (Messeage)</label>
+                <textarea type="text" class="form-control" id="validationCustom04" required></textarea>
+                <div class="invalid-feedback">
+                    請提供您的需求，以便聯繫 
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        我接受《使用者條款》
+                    </label>
+                    <div class="invalid-feedback">
+                        送出前請務必詳閱並勾選
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-success" type="submit">送出</button>
+            </div>
+        </form>
+        <script>
+            (function () {
+                'use strict'
+                var forms = document.querySelectorAll('.needs-validation')
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+    
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })()
+        </script>
+    </div>
+    <br>
+
+
+
+    <!-- footer -->
+    <footer class="text-white pt-4 pb-4" style="background-color: darkgreen;">
+        <div class="container text-md-left">
+            <div class="row text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">公司介紹</h5>
+                    <p>我們的使命和價值是為客戶提供創意生活方式和更好的生活品質。</p>
+                    <p>
+                        <a href="./about.html" class="text-white" style="text-decoration: none;"> >>查看更多 </a>
+                    </p>
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-line"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">最新消息</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">展覽資訊</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">產品目錄</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">友站連結</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">產品專區</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒吧櫃台組合</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒吧台</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">高腳椅</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒櫃</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">餐桌椅套組</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">咖啡桌/茶几</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">聯絡我們</h5>
+                    <p><i class="fas fa-home mr-3"></i> 2 Tienyuan Lane, Hsialung Village, Hsiushui Hsiang, Changhua
+                        Hsien, Taiwan 504</p>
+                    <p><i class="fas fa-envelope mr-3"></i> youshun-pg12@umail.hinet.net</p>
+                    <p><i class="fas fa-phone mr-3"></i> +886-4-768 5551</p>
+                    <p><i class="fas fa-print mr-3"></i> +886-4-768 5277</p>
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 20px;">
+        <p class="text-center"><a href="" class="btn btn-outline-light mr-2">預約參觀</a><span> &NonBreakingSpace;
+                優順實業股份有限公司 | 統編 23815908</span></p>
+        <div class="copyright text-center">Copyright © 2024 Phoebe & George Ent. Co., Ltd. All Rights Reserved. (PHPD07
+            期中專題成果) </div>
+    </footer>
+    <!-- footer end -->
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoebe & George | 優順實業股份有限公司</title>
+    <link rel="stylesheet" href="./boostrap_css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="./boostrap_js/bootstrap.bundle.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="p-2 text-center" style="background-color: lightgreen;">最新消息/速報</div>
+    <div class="sticky-top p-2" style="background-color: darkgreen;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img src="./image/logo_02.png" alt="" height="70px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" style="color: white" ;>
+                    <span class="navbar-toggler-icon text-white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./about.html">公司介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./news.html">最新消息</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                產品專區
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./products_all.html">所有商品</a></li>
+                                <li><a class="dropdown-item" href="#">酒吧櫃台組合</a></li>
+                                <li><a class="dropdown-item" href="#">酒吧台</a></li>
+                                <li><a class="dropdown-item" href="#">高腳椅</a></li>
+                                <li><a class="dropdown-item" href="#">酒櫃</a></li>
+                                <li><a class="dropdown-item" href="#">餐桌椅套組</a></li>
+                                <li><a class="dropdown-item" href="#">咖啡桌/茶几</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./contact_us.html">聯絡我們</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <ul class="list-unstyled list-inline m-2">
+                        <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-user"></i></button>
+                        </li>
+                        <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#"><i class="fas fa-cart-shopping"></i></button>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+    </div>
+    <!-- header end -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">會員登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">帳號 / id :</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">密碼 / password :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <p><a href="#">忘記密碼?</a>&ensp;或&ensp;<a href="#">會員註冊</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+                    <button type="button" class="btn btn-success">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 輪播圖 -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./image/main01.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./image/main02.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./image/main03.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!-- 輪播圖結束 -->
+
+    <!-- 最新消息/插入展場影片 -->
+    <div class="container text-center mt-5 mb-4">
+        <h4 class="container text-center mb-4" style="font-weight: bolder; color: black;">最新消息</h4>
+        <div class="ratio ratio-21x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UgdGQR_bQG0?si=5fWPHDNQFP7tBD5P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <!-- 參展花絮/輪播/深色按鍵 -->
+    <div class="container-fluid text-center mt-5 mb-4">
+        <h4 class="container text-center mb-4" style="font-weight: bolder; color: black;">參展花絮</h4>
+        <div id="tradeShow" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./image/trade_show2024_cut.jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./image/trade_show2018_cut.jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="./image/trade_show2015_cut.jpg" alt="">
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#tradeShow" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#tradeShow" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+    </div>
+    <div class="container-fluid text-center mt-5 mb-4">
+        <h4 class="container text-center mb-4" style="font-weight: bolder; color: black;">精選商品</h4>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="text-white pt-4 pb-4" style="background-color: darkgreen;">
+        <div class="container text-md-left">
+            <div class="row text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">公司介紹</h5>
+                    <p>我們的使命和價值是為客戶提供創意生活方式和更好的生活品質。</p>
+                    <p>
+                        <a href="./about.html" class="text-white" style="text-decoration: none;"> >>查看更多 </a>
+                    </p>
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-line"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">最新消息</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">展覽資訊</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">產品目錄</a>
+                    </p>
+                    <p>
+                        <a href="#outsideWeb" class="text-white" style="text-decoration: none;">友站連結</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">產品專區</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒吧櫃台組合</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒吧台</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">高腳椅</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒櫃</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">餐桌椅套組</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">咖啡桌/茶几</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">聯絡我們</h5>
+                    <p><i class="fas fa-home mr-3"></i> 2 Tienyuan Lane, Hsialung Village, Hsiushui Hsiang, Changhua Hsien, Taiwan 504</p> 
+                    <p><i class="fas fa-envelope mr-3"></i> youshun-pg12@umail.hinet.net</p> 
+                    <p><i class="fas fa-phone mr-3"></i> +886-4-768 5551</p> 
+                    <p><i class="fas fa-print mr-3"></i> +886-4-768 5277</p> 
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 20px;">
+        <p class="text-center"><a href="" class="btn btn-outline-light mr-2">預約參觀</a><span> &NonBreakingSpace; 優順實業股份有限公司 | 統編 23815908</span></p>
+        <div class="copyright text-center">Copyright © 2024 Phoebe & George Ent. Co., Ltd. All Rights Reserved. (PHPD07 期中專題成果) </div>
+    </footer>
+    <!-- footer end -->
+</body>
+
+</html>

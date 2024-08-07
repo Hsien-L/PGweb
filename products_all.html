@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoebe & George | 優順實業股份有限公司</title>
+    <link rel="stylesheet" href="./boostrap_css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="./boostrap_js/bootstrap.bundle.js"></script>
+    <style>
+        a.list-group-item {
+            background-color: light;
+            color: black;
+        }
+
+        a.list-group-item:hover {
+            background-color: lightgreen;
+            color: black;
+        }
+
+        a.list-group-item.active {
+            background-color: green;
+            border-color: lightgreen;
+        }
+
+        div.col-9 img {
+            filter: drop-shadow(6px 6px 8px lightgray);
+            border-radius: 3%;
+        }
+        div.col-9 p {
+           color: black; font-size: larger;
+           margin-top: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="p-2 text-center" style="background-color: lightgreen;">最新消息/速報</div>
+    <div class="sticky-top p-2" style="background-color: darkgreen;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img src="./image/logo_02.png" alt="" height="70px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" style="color: white" ;>
+                    <span class="navbar-toggler-icon text-white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./about.html">公司介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./news.html">最新消息</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                產品專區
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./products_all.html">所有商品</a></li>
+                                <li><a class="dropdown-item" href="#">酒吧櫃台組合</a></li>
+                                <li><a class="dropdown-item" href="#">酒吧台</a></li>
+                                <li><a class="dropdown-item" href="#">高腳椅</a></li>
+                                <li><a class="dropdown-item" href="#">酒櫃</a></li>
+                                <li><a class="dropdown-item" href="#">餐桌椅套組</a></li>
+                                <li><a class="dropdown-item" href="#">咖啡桌/茶几</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./contact_us.html">聯絡我們</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+
+                    <ul class="list-unstyled list-inline m-2">
+                        <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-user"></i></button>
+                        </li>
+                        <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#"><i class="fas fa-cart-shopping"></i></button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <!-- header end -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">會員登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">帳號 / id :</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">密碼 / password :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <p><a href="#">忘記密碼?</a>&ensp;或&ensp;<a href="#">會員註冊</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+                    <button type="button" class="btn btn-success">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 麵包屑 -->
+    <nav class="ms-4 mt-2"
+        style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a style="text-decoration: none; color: black;" href="./index.html">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">產品專區</li>
+        </ol>
+    </nav>
+
+    <!-- 側邊欄 -->
+    <div class="row m-1">
+        <div class="col-3">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-all-list" data-bs-toggle="list"
+                    href="#list-all" role="tab" aria-controls="list-all">所有商品</a>
+                <a class="list-group-item list-group-item-action" id="list-bar-set-list" data-bs-toggle="list"
+                    href="#list-bar-set" role="tab" aria-controls="list-bar-set">酒吧櫃台組合</a>
+                <a class="list-group-item list-group-item-action" id="list-bar-list" data-bs-toggle="list"
+                    href="#list-bar" role="tab" aria-controls="list-bar">酒吧台</a>
+                <a class="list-group-item list-group-item-action dropdown-item" id="list-stool-list"
+                    data-bs-toggle="list" href="#list-stool" role="tab" aria-controls="list-stool">高腳椅</a>
+                <a class="list-group-item list-group-item-action" id="list-cabinet-list" data-bs-toggle="list"
+                    href="#list-cabinet" role="tab" aria-controls="list-cabinet">酒櫃</a>
+                <a class="list-group-item list-group-item-action" id="list-dinner-list" data-bs-toggle="list"
+                    href="#list-dinner" role="tab" aria-controls="list-dinner">餐桌椅套組</a>
+                <a class="list-group-item list-group-item-action" id="list-coffee-list" data-bs-toggle="list"
+                    href="#list-coffee" role="tab" aria-controls="list-coffee">咖啡桌/茶几</a>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="container tab-pane fade show active" id="list-all" role="tabpanel" aria-labelledby="list-all-list">
+                    <h4 class="mt-2 mb-4" style="font-weight: bolder; color: black; text-align:center;">全部商品</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13011-1+PG-6057C-2+PG-2019.jpg" alt="">
+                                <p class="mt-2">No.1</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none; ">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13012+ PG-6069C+PG-2023.jpg" alt="">
+                                <p class="mt-2">No.2</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g
+                                    src="./image/products/bar_cabinet_set (9)/PG-13020-11+PG-6074C+PG-2018-BK.jpg"
+                                    alt="">
+                                <p class="mt-2">No.3</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13020-5+PG-6074C+PG-2018.jpg" alt="">
+                                <p class="mt-2">No.4</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13028+PG-6076C+PG-2017.jpg" alt="">
+                                <p class="mt-2">No.5</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g
+                                    src="./image/products/bar_cabinet_set (9)/PG-13041+PG-6076C+PG-2021.jpg" alt="">
+                                <p class="mt-2">No.6</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13044-2+PG-6057C-4+PG-2027.jpg" alt="">
+                                <p class="mt-2">No.7</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13047+PG-6016C+PG-2015.jpg" alt="">
+                                <p class="mt-2">No.8</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g
+                                    src="./image/products/bar_cabinet_set (9)/PG-13049+PG-6057C+PG-2016.jpg" alt="">
+                                <p class="mt-2">No.9</p>
+                                </img>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-bar-set" role="tabpanel" aria-labelledby="list-bar-set-list">
+                    <h4 class="mt-2 mb-4" style="font-weight: bolder; color: black; text-align:center;">酒吧櫃台組合</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13011-1+PG-6057C-2+PG-2019.jpg" alt="">
+                                <p class="mt-2">No.1</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13012+ PG-6069C+PG-2023.jpg" alt="">
+                                <p class="mt-2">No.2</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g
+                                    src="./image/products/bar_cabinet_set (9)/PG-13020-11+PG-6074C+PG-2018-BK.jpg"
+                                    alt="">
+                                <p class="mt-2">No.3</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13020-5+PG-6074C+PG-2018.jpg" alt="">
+                                <p class="mt-2">No.4</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13028+PG-6076C+PG-2017.jpg" alt="">
+                                <p class="mt-2">No.5</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g
+                                    src="./image/products/bar_cabinet_set (9)/PG-13041+PG-6076C+PG-2021.jpg" alt="">
+                                <p class="mt-2">No.6</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13044-2+PG-6057C-4+PG-2027.jpg" alt="">
+                                <p class="mt-2">No.7</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300"
+                                    src="./image/products/bar_cabinet_set (9)/PG-13047+PG-6016C+PG-2015.jpg" alt="">
+                                <p class="mt-2">No.8</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g
+                                    src="./image/products/bar_cabinet_set (9)/PG-13049+PG-6057C+PG-2016.jpg" alt="">
+                                <p class="mt-2">No.9</p>
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-bar" role="tabpanel" aria-labelledby="list-bar-list">
+                    <h4 class="mt-2 mb-4" style="font-weight: bolder; color: black; text-align:center;">酒吧台</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13020-12+6016C-10.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-01</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13020-9+6016C.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-02</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13047+6016C.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-03</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13049+6057C-2.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-04</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13053+6016C.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-05</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13054+6016C-3.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-06</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13054-1+6068C.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-07</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13059+6076C.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-08</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13060+PG-6016C.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-09</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13061-1+PG-6050C-1.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-10</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13067+PG-6068C.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-11</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13093+6089C.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-12</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="./products_detail.html" style="text-decoration: none;" target="_blank">
+                                <img width="300" src="./image/products/bar_counter/PG-13094+6050C-3.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-13</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13095+6092C.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-14</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/bar_counter/PG-13097+6087C-BR.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">bar-counter-15</p>
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-stool" role="tabpanel" aria-labelledby="list-stool-list">
+                    <h4 class="mt-2 mb-4" style="font-weight: bolder; color: black; text-align:center;">高腳椅</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (1).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-01</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (2).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-02</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (3).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-03</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (4).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-04</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (5).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-05</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (6).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-06</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (7).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-07</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (8).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-08</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (9).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-09</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (10).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-10</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (11).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-11</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (12).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-12</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (13).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-13</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (14).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-14</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (15).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-15</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (16).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-16</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (17).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-17</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (18).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-18</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (19).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-19</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (20).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-20</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (21).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-21</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (22).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-22</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (23).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-23</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (24).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-24</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (25).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-25</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (26).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-26</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-3 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="200" src="./image/products/stool/stool (27).jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">stool-27</p>
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-cabinet" role="tabpanel" aria-labelledby="list-cabinet-list">
+                    <h4 class="mt-2 mb-4" style="font-weight: bolder; color: black; text-align:center;">酒櫃</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2015.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-01</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2016-1.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-02</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2016.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-03</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2017.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-04</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2018.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-05</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2019.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-06</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2021.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-07</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2022.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-08</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2023.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-09</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2024.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-10</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2025.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-11</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2027.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-12</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2028.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-13</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center pt-4">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/cabinet(17)/PG-2029.jpg" alt="">
+                                <p class="mt-2" style="color: black; font-size: larger;">Cabinet-14</p>
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-dinner" role="tabpanel" aria-labelledby="list-dinner-list">
+                    <h4 class="mt-2 mb-4" style="font-weight: bolder; color: black; text-align:center;">餐桌椅套組</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/dining_set (7)/PG-131T+PG-8104C.jpg" alt="">
+                                <p class="mt-2">Dining-01</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/dining_set (7)/PG-135T+PG-8103C.jpg" alt="">
+                                <p class="mt-2">Dining-02</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g src="./image/products/dining_set (7)/PG-32T+PG-8011C.jpg"
+                                    alt="">
+                                <p class="mt-2">Dining-03</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/dining_set (7)/PG-36T+PG-8994C.jpg" alt="">
+                                <p class="mt-2">Dining-04</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/dining_set (7)/PG-43T+PG-8975C.jpg" alt="">
+                                <p class="mt-2">Dining-05</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g src="./image/products/dining_set (7)/PG-51T+PG-8992C.png"
+                                    alt="">
+                                <p class="mt-2">Dining-06</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/dining_set (7)/PG-59T+PG-8994C.jpg" alt="">
+                                <p class="mt-2">Dining-07</p>
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-coffee" role="tabpanel" aria-labelledby="list-coffee-list">
+                    <h4 class="mt-2 mb-4" style="font-weight: bolder; color: black; text-align:center;">咖啡桌/茶几</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/coffee_table(10)/PG-088T+PG-088ET.png" alt="">
+                                <p class="mt-2">Table-01</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/coffee_table(10)/PG-097CT+PG-097ET.jpg" alt="">
+                                <p class="mt-2">Table-02</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g
+                                    src="./image/products/coffee_table(10)/PG-100T+PG-100ET.jpg" alt="">
+                                <p class="mt-2">Table-03</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/coffee_table(10)/PG-1010ET.jpg" alt="">
+                                <p class="mt-2">Table-04</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/coffee_table(10)/PG-102CT+PG-102ET.jpg" alt="">
+                                <p class="mt-2">Table-05</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g
+                                    src="./image/products/coffee_table(10)/PG-103T+PG-103ET.jpg" alt="">
+                                <p class="mt-2">Table-06</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/coffee_table(10)/PG-106T+PG-106ET.jpg" alt="">
+                                <p class="mt-2">Table-07</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" src="./image/products/coffee_table(10)/PG-116CT.jpg" alt="">
+                                <p class="mt-2">Table-08</p>
+                                </img>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-xxl-4 text-center">
+                            <a href="#" style="text-decoration: none;">
+                                <img width="300" width="300" g
+                                    src="./image/products/coffee_table(10)/PG-116T+PG-116ET.png" alt="">
+                                <p class="mt-2">Table-09</p>
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 產品專區 -->
+
+
+
+    <!-- footer -->
+    <footer class="text-white pt-4 pb-4" style="background-color: darkgreen;">
+        <div class="container text-md-left">
+            <div class="row text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">公司介紹</h5>
+                    <p>我們的使命和價值是為客戶提供創意生活方式和更好的生活品質。</p>
+                    <p>
+                        <a href="./about.html" class="text-white" style="text-decoration: none;"> >>查看更多 </a>
+                    </p>
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-line"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">最新消息</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">展覽資訊</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">產品目錄</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">友站連結</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">產品專區</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒吧櫃台組合</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒吧台</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">高腳椅</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒櫃</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">餐桌椅套組</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">咖啡桌/茶几</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">聯絡我們</h5>
+                    <p><i class="fas fa-home mr-3"></i> 2 Tienyuan Lane, Hsialung Village, Hsiushui Hsiang, Changhua
+                        Hsien, Taiwan 504</p>
+                    <p><i class="fas fa-envelope mr-3"></i> youshun-pg12@umail.hinet.net</p>
+                    <p><i class="fas fa-phone mr-3"></i> +886-4-768 5551</p>
+                    <p><i class="fas fa-print mr-3"></i> +886-4-768 5277</p>
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 20px;">
+        <p class="text-center"><a href="" class="btn btn-outline-light mr-2">預約參觀</a><span> &NonBreakingSpace;
+                優順實業股份有限公司 | 統編 23815908</span></p>
+        <div class="copyright text-center">Copyright © 2024 Phoebe & George Ent. Co., Ltd. All Rights Reserved. (PHPD07
+            期中專題成果) </div>
+    </footer>
+    <!-- footer end -->
+</body>
+
+</html>

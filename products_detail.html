@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoebe & George | 優順實業股份有限公司</title>
+    <link rel="stylesheet" href="./boostrap_css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="./boostrap_js/bootstrap.bundle.js"></script>
+    <style>
+        a.list-group-item {
+            background-color: light;
+            color: black;
+        }
+
+        a.list-group-item:hover {
+            background-color: lightgreen;
+            color: black;
+        }
+
+        a.list-group-item.active {
+            background-color: green;
+            border-color: lightgreen;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+        }
+
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="p-2 text-center" style="background-color: lightgreen;">最新消息/速報</div>
+    <div class="sticky-top p-2" style="background-color: darkgreen;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img src="./image/logo_02.png" alt="" height="70px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" style="color: white" ;>
+                    <span class="navbar-toggler-icon text-white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./about.html">公司介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./news.html">最新消息</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                產品專區
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./products_all.html">所有商品</a></li>
+                                <li><a class="dropdown-item" href="#">酒吧櫃台組合</a></li>
+                                <li><a class="dropdown-item" href="#">酒吧台</a></li>
+                                <li><a class="dropdown-item" href="#">高腳椅</a></li>
+                                <li><a class="dropdown-item" href="#">酒櫃</a></li>
+                                <li><a class="dropdown-item" href="#">餐桌椅套組</a></li>
+                                <li><a class="dropdown-item" href="#">咖啡桌/茶几</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./contact_us.html">聯絡我們</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+
+                    <ul class="list-unstyled list-inline m-2">
+                        <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-user"></i></button>
+                        </li>
+                        <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#"><i class="fas fa-cart-shopping"></i></button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <!-- header end -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">會員登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">帳號 / id :</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">密碼 / password :</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <p><a href="#">忘記密碼?</a>&ensp;或&ensp;<a href="#">會員註冊</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+                    <button type="button" class="btn btn-success">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 麵包屑 -->
+    <nav class="ms-4 mt-2"
+        style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a style="text-decoration: none; color: black;" href="./index.html">首頁</a></li>
+            <li class="breadcrumb-item"><a style="text-decoration: none; color: black;"
+                    href="./products_all.html">產品專區</a></li>
+            <li class="breadcrumb-item"><a style="text-decoration: none; color: black;"
+                    href="./products_all.html">酒吧台</a></li>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">bar-counter-13</li>
+        </ol>
+    </nav>
+
+    <!-- 側邊欄 -->
+    <div class="row m-1">
+        <div class="col-3">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action" id="list-all-list" data-bs-toggle="list"
+                    href="#list-all" role="tab" aria-controls="list-all">所有商品</a>
+                <a class="list-group-item list-group-item-action" id="list-bar-set-list" data-bs-toggle="list"
+                    href="#list-bar-set" role="tab" aria-controls="list-bar-set">酒吧櫃台組合</a>
+                <a class="list-group-item list-group-item-action active" id="list-bar-list" data-bs-toggle="list"
+                    href="#list-bar" role="tab" aria-controls="list-bar">酒吧台</a>
+                <a class="list-group-item list-group-item-action" id="list-stool-list" data-bs-toggle="list"
+                    href="#list-stool" role="tab" aria-controls="list-stool">高腳椅</a>
+                <a class="list-group-item list-group-item-action" id="list-cabinet-list" data-bs-toggle="list"
+                    href="#list-cabinet" role="tab" aria-controls="list-cabinet">酒櫃</a>
+                <a class="list-group-item list-group-item-action" id="list-dinner-list" data-bs-toggle="list"
+                    href="#list-dinner" role="tab" aria-controls="list-dinner">餐桌椅套組</a>
+                <a class="list-group-item list-group-item-action" id="list-coffee-list" data-bs-toggle="list"
+                    href="#list-coffee" role="tab" aria-controls="list-coffee">咖啡桌/茶几</a>
+            </div>
+        </div>
+
+        <!-- 商品簡介 -->
+        <div class="col-9">
+            <h4 class="mt-2 mb-4" style="font-weight: bolder; color: black; text-align:center;">商品介紹</h4>
+            <div class="container-fluid mt-2 mb-2 mx-auto">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-xl-6 col-xxl-5 text-center">
+                        <div class="container">
+                            <div class="mySlides">
+                                <img src="./image/products/bar_counter/PG-13094+6050C-3.jpg" style="width:100%">
+                            </div>
+                    
+                            <div class="mySlides">
+                                <img src="./image/products/bar_counter/PG-13094-BacK.jpg" style="width:100%">
+                            </div>
+                    
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+                            
+                            <br>
+
+                            <div class="row">
+                                <div class="column">
+                                    <img class="demo cursor" src="./image/products/bar_counter/PG-13094+6050C-3.jpg" style="width:100px" onclick="currentSlide(1)"
+                                        alt="">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="./image/products/bar_counter/PG-13094-BacK.jpg" style="width:100px" onclick="currentSlide(2)"
+                                        alt="">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <script>
+                            let slideIndex = 1;
+                            showSlides(slideIndex);
+                    
+                            function plusSlides(n) {
+                                showSlides(slideIndex += n);
+                            }
+                    
+                            function currentSlide(n) {
+                                showSlides(slideIndex = n);
+                            }
+                    
+                            function showSlides(n) {
+                                let i;
+                                let slides = document.getElementsByClassName("mySlides");
+                                let dots = document.getElementsByClassName("demo");
+                                let captionText = document.getElementById("caption");
+                                if (n > slides.length) { slideIndex = 1 }
+                                if (n < 1) { slideIndex = slides.length }
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                }
+                                for (i = 0; i < dots.length; i++) {
+                                    dots[i].className = dots[i].className.replace(" active", "");
+                                }
+                                slides[slideIndex - 1].style.display = "block";
+                                dots[slideIndex - 1].className += " active";
+                                captionText.innerHTML = dots[slideIndex - 1].alt;
+                            }
+                        </script>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-xl-6 col-xxl-7">
+                        <h5 class="mt-2 mb-2">第十三號作品 (bar-counter-13)</h5>
+                        <p>商品編號: PG-13094+6050C-3</p>
+                        <hr>
+                        <p>售價: $38888</p>
+                        <p style="font-weight: bolder;font-size:smaller">運費說明</p>
+                        <hr>
+                        <p class="lh-1" style="font-size:smaller">雙北、桃園、基隆、宜蘭→免運</p>
+                        <p class="lh-1" style="font-size:smaller">新竹、台中、彰化→免運</p>
+                        <p class="lh-1" style="font-size:smaller">苗栗、雲林、南投→800元</p>
+                        <p class="lh-1" style="font-size:smaller">嘉義、台南、高雄、屏東→1200元</p>
+                        <p class="lh-1" style="font-size:smaller">花蓮、台東、外島地區暫時無法配送</p>
+                        <br>
+                        <p class="lh-1" style="font-size:smaller">※各縣市偏遠區以及不配送區域，請參考以下的【購物須知】</p>
+                        <p class="lh-1" style="font-size:smaller">※四樓以上無電梯需酌收樓層費(包含四樓)</p>
+                        <p class="lh-1" style="font-size:smaller">※雲林以北可貨到付款</p>
+                        <p class="lh-1" style="font-size:smaller">※南部地區無貨到付款服務</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs mt-4">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#menu1">商品規格</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#menu2">購物須知</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container active" id="menu1">
+                    <h5 class="mt-4">商品規格</h5>
+                    <hr>
+                    <p style="font-weight: bolder;">商品尺寸</p>
+                    <p>大几:圓80高30公分</p>
+                    <p>小几:圓50高50公分</p>
+                    <br>
+                    <p>◇恕不拆賣</p>
+                    <p>◇因商品為人工丈量因素，故尺寸誤差範圍約為±2.5公分</p>
+                    <br>
+                    <p style="font-weight: bolder;">材質說明</p>
+                    <p>桌面: 亮面岩板</p>
+                    <p>主體: 曲木貼馬鞍皮</p>
+                    <p>其他: 防刮腳粒</p>
+                </div>
+                <div class="tab-pane container fade" id="menu2">
+                    <img src="./image/20220519001.jpg" alt="" width="800">
+                    <img src="./image/20211215001.jpeg" alt="" width="800">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+
+
+    <!-- footer -->
+    <footer class="text-white pt-4 pb-4" style="background-color: darkgreen;">
+        <div class="container text-md-left">
+            <div class="row text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">公司介紹</h5>
+                    <p>我們的使命和價值是為客戶提供創意生活方式和更好的生活品質。</p>
+                    <p>
+                        <a href="./about.html" class="text-white" style="text-decoration: none;"> >>查看更多 </a>
+                    </p>
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-line"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">最新消息</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">展覽資訊</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">產品目錄</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">友站連結</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">產品專區</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒吧櫃台組合</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒吧台</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">高腳椅</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">酒櫃</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">餐桌椅套組</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">咖啡桌/茶几</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">聯絡我們</h5>
+                    <p><i class="fas fa-home mr-3"></i> 2 Tienyuan Lane, Hsialung Village, Hsiushui Hsiang, Changhua
+                        Hsien, Taiwan 504</p>
+                    <p><i class="fas fa-envelope mr-3"></i> youshun-pg12@umail.hinet.net</p>
+                    <p><i class="fas fa-phone mr-3"></i> +886-4-768 5551</p>
+                    <p><i class="fas fa-print mr-3"></i> +886-4-768 5277</p>
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 20px;">
+        <p class="text-center"><a href="" class="btn btn-outline-light mr-2">預約參觀</a><span> &NonBreakingSpace;
+                優順實業股份有限公司 | 統編 23815908</span></p>
+        <div class="copyright text-center">Copyright © 2024 Phoebe & George Ent. Co., Ltd. All Rights Reserved. (PHPD07
+            期中專題成果) </div>
+    </footer>
+    <!-- footer end -->
+</body>
+
+</html>

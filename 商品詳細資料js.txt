@@ -1,0 +1,91 @@
+// html製作一個商品詳細頁的版面
+
+
+需求 : 要替換的有 吧檯正面照、背面照、商品名稱、商品編號、售價
+// 寫一個產生商品html的方法 (參數就是上面這些):
+
+function generateXXX(id) {
+	switch(id) {
+    case 'id1':
+        圖片路徑 = './path1/...';
+	商品編號 = '編號1';
+	價格 = '30';
+        break;
+    case 'id2':
+        圖片路徑 = './path2/...';
+	商品編號 = '編號2';
+	價格 = '50';
+
+        break;
+    default:
+        圖片路徑 = './pathAll/...';
+	商品編號 = '編號ALL';
+	價格 = '100';
+        break;
+}
+
+
+
+
+    return `<div class="col-9" id=${id}>
+            <h4 class="mt-2 mb-4" style="font-weight: bolder; color: black; text-align:center;">商品介紹</h4>
+            <div class="container-fluid mt-2 mb-2 mx-auto">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-xl-6 col-xxl-5 text-center">
+                        <div class="container">
+                            <div class="mySlides">
+                                <img src=${圖片路徑} style="width:100%">
+                            </div>
+                    
+                            <div class="mySlides">
+                                <img src=${圖片路徑} style="width:100%">
+                            </div>
+                    
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+                            
+                            <br>
+
+                            <div class="row">
+                                <div class="column">
+                                    <img class="demo cursor" src=${圖片路徑} style="width:100px" onclick="currentSlide(1)"
+                                        alt="">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src=${圖片路徑} style="width:100px" onclick="currentSlide(2)"
+                                        alt="">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    
+                        
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-xl-6 col-xxl-7">
+                        <h5 class="mt-2 mb-2">第十三號作品 (bar-counter-13)</h5>
+                        <p>商品編號: ${商品編號}</p>
+                        <hr>
+                        <p>售價: $38888</p>
+                        <p style="font-weight: bolder;font-size:smaller">運費說明</p>
+                        <hr>
+                        <p class="lh-1" style="font-size:smaller">雙北、桃園、基隆、宜蘭→免運</p>
+                        <p class="lh-1" style="font-size:smaller">新竹、台中、彰化→免運</p>
+                        <p class="lh-1" style="font-size:smaller">苗栗、雲林、南投→${價格}</p>
+                        <p class="lh-1" style="font-size:smaller">嘉義、台南、高雄、屏東→${價格}</p>
+                        <p class="lh-1" style="font-size:smaller">花蓮、台東、外島地區暫時無法配送</p>
+                        <br>
+                        <p class="lh-1" style="font-size:smaller">※各縣市偏遠區以及不配送區域，請參考以下的【購物須知】</p>
+                        <p class="lh-1" style="font-size:smaller">※四樓以上無電梯需酌收樓層費(包含四樓)</p>
+                        <p class="lh-1" style="font-size:smaller">※雲林以北可貨到付款</p>
+                        <p class="lh-1" style="font-size:smaller">※南部地區無貨到付款服務</p>
+                    </div>
+                </div>
+
+            </div>
+           
+        </div>`
+
+}
+
+// 在側邊欄(sidebar)以及產品專區(nav)點擊時，給一個click事件，觸發上面那個方法，就可以根據你給不同參數去生成頁面
